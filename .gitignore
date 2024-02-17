@@ -1,3 +1,5 @@
+.DS_Store
+
 # Bun dependencies
 .bun/
 bun.lockb
