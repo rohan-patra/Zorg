@@ -1,41 +1,23 @@
-import * as React from "react"
-import Link from "next/link"
+"use client"
 
-import { NavItem } from "@/types/nav"
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
+import { MainNav as NavigationMainNav } from "./navigation"
+import { Search } from "./search"
+import { ThemeToggle } from "./theme-toggle"
+import { UserNav } from "./user-nav"
 
-interface MainNavProps {
-  items?: NavItem[]
-}
-
-export function MainNav({ items }: MainNavProps) {
+export function MainNav() {
   return (
-    <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
-        <span className="inline-block font-bold">{siteConfig.name}</span>
-      </Link>
-      {items?.length ? (
-        <nav className="flex gap-6">
-          {items?.map(
-            (item, index) =>
-              item.href && (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
-                    item.disabled && "cursor-not-allowed opacity-80"
-                  )}
-                >
-                  {item.title}
-                </Link>
-              )
-          )}
-        </nav>
-      ) : null}
+    <div className="flex-col md:flex">
+      <div className="border-b">
+        <div className="flex h-16 items-center px-4">
+          <NavigationMainNav className="mx-6" />
+          <div className="ml-auto flex items-center space-x-4">
+            <Search />
+            <UserNav />
+            <ThemeToggle />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
