@@ -1,0 +1,56 @@
+{
+    "patientInfo": {
+        "name": "Patient Name 21",
+        "gender": "Female",
+        "age": 29,
+        "dob": "1980-03-28",
+        "address": "456 New Example Street, City 21, Country",
+        "race": "Other"
+    },
+    "genericHealthInfo": {
+        "height": "157 cm",
+        "weight": "69 kg",
+        "BMI": "24.1",
+        "restingHeartRate": "69 bpm",
+        "VO2Max": "35.1 ml/kg/min",
+        "bodyFatPercentage": "25.2%",
+        "vision": {
+            "leftEye": "20/40",
+            "rightEye": "20/20"
+        },
+        "allergies": [
+            "Dust mites",
+            "Shellfish",
+            "Latex"
+        ],
+        "drugAllergies": [
+            "Nuts",
+            "Latex",
+            "Pollen"
+        ],
+        "surgicalHistory": [],
+        "pastHealthcareVisits": [
+            {
+                "visitDate": "2018-09-05",
+                "reason": "Fracture",
+                "outcome": "Cast applied"
+            }
+        ]
+    },
+    "diseases": [
+        {
+            "diseaseId": 1,
+            "name": "COPD",
+            "dateOfIncidence": "2022-09-25",
+            "description": "Chronic obstructive pulmonary disease, a chronic inflammatory lung disease.",
+            "assignedTreatment": "Bronchodilators, steroids"
+        },
+        {
+            "diseaseId": 2,
+            "name": "Diabetes Type 2",
+            "dateOfIncidence": "2016-03-25",
+            "description": "Affects the way the body processes blood sugar.",
+            "assignedTreatment": "Metformin, diet and exercise"
+        }
+    ]
+}

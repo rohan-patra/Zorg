@@ -1,0 +1,79 @@
+{
+    "patientInfo": {
+        "name": "Patient Name 29",
+        "gender": "Male",
+        "age": 41,
+        "dob": "1956-01-14",
+        "address": "456 New Example Street, City 29, Country",
+        "race": "African American"
+    },
+    "genericHealthInfo": {
+        "height": "176 cm",
+        "weight": "87 kg",
+        "BMI": "28.6",
+        "restingHeartRate": "91 bpm",
+        "VO2Max": "45.3 ml/kg/min",
+        "bodyFatPercentage": "28.9%",
+        "vision": {
+            "leftEye": "Corrected with contact lenses",
+            "rightEye": "20/30"
+        },
+        "allergies": [
+            "Latex",
+            "Shellfish",
+            "Dust mites"
+        ],
+        "drugAllergies": [
+            "Dust mites"
+        ],
+        "surgicalHistory": [
+            {
+                "surgeryName": "Hernia repair",
+                "date": "2023-03-13",
+                "outcome": "Recovered with complications"
+            }
+        ],
+        "pastHealthcareVisits": [
+            {
+                "visitDate": "2015-12-19",
+                "reason": "Routine checkup",
+                "outcome": "All clear"
+            },
+            {
+                "visitDate": "2015-01-02",
+                "reason": "Flu symptoms",
+                "outcome": "Prescribed medication"
+            }
+        ]
+    },
+    "diseases": [
+        {
+            "diseaseId": 1,
+            "name": "Heart Failure",
+            "dateOfIncidence": "2016-05-22",
+            "description": "The heart can't pump blood as well as it should.",
+            "assignedTreatment": "ACE inhibitors, diuretics"
+        },
+        {
+            "diseaseId": 2,
+            "name": "Anxiety",
+            "dateOfIncidence": "2020-11-13",
+            "description": "Intense, excessive, and persistent worry and fear about everyday situations.",
+            "assignedTreatment": "Anxiolytics, cognitive behavioral therapy"
+        },
+        {
+            "diseaseId": 3,
+            "name": "COPD",
+            "dateOfIncidence": "2015-05-22",
+            "description": "Chronic obstructive pulmonary disease, a chronic inflammatory lung disease.",
+            "assignedTreatment": "Bronchodilators, steroids"
+        },
+        {
+            "diseaseId": 4,
+            "name": "Osteoporosis",
+            "dateOfIncidence": "2021-02-07",
+            "description": "Bones become weak and brittle.",
+            "assignedTreatment": "Bisphosphonates, calcium supplements"
+        }
+    ]
+}
