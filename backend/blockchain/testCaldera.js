@@ -1,22 +1,35 @@
 require("dotenv").config();
 const { ethers } = require("ethers");
 
+// Assuming the ABI has been updated to reflect the new structure of the smart contract
 const contractABI = require("../../contracts/artifacts/contracts/EHRAdd.sol/EHRAdd.json").abi;
-const contractAddress = "0x10FdE1ba4cb12518e0419C0c9fcEb8A4155f61d3"; 
+const contractAddress = "0x9d1b87B78AF57Bd856a409C1Eb0A949e5917bC17";
 
-const providerUrl = "https://treehacks-devnet.rpc.caldera.xyz/http"; 
-const privateKey = process.env.PRIVATE_KEY; 
+const providerUrl = "https://treehacks-devnet.rpc.caldera.xyz/http";
+const privateKey = process.env.PRIVATE_KEY;
 
 const provider = new ethers.providers.JsonRpcProvider(providerUrl);
 const signer = new ethers.Wallet(privateKey, provider);
 
 const healthcareRecordsContract = new ethers.Contract(contractAddress, contractABI, signer);
 
-async function addRecord(ipfsHash) {
+// Modified to accept key, cid, and filePath
+async function addRecord(key, cid, filePath) {
     try {
-        const tx = await healthcareRecordsContract.addRecord(ipfsHash);
-        await tx.wait();
-        console.log(`Record added with hash: ${ipfsHash}`);
+        // Updated to pass the new parameters
+        const tx = await healthcareRecordsContract.addRecord(key, cid, filePath);
+        const receipt = await tx.wait();
+
+        console.log(`Transaction Hash: ${receipt.transactionHash}`);
+        console.log(`Gas Used: ${receipt.gasUsed.toString()}`);
+        console.log(`Block Number: ${receipt.blockNumber}`);
+        console.log(`Record added with Key: ${key}, CID: ${cid}, and File Path: ${filePath}`);
+
+        for (const event of receipt.events) {
+            if (event.event === 'RecordAdded') {
+                console.log(`Event RecordAdded: Key - ${event.args.key}, CID - ${event.args.cid}, File Path - ${event.args.filePath}`);
+            }
+        }
     } catch (error) {
         console.error(`Failed to add record: ${error}`);
     }
@@ -25,7 +38,11 @@ async function addRecord(ipfsHash) {
 async function getRecords(userAddress) {
     try {
         const records = await healthcareRecordsContract.getRecords(userAddress);
-        console.log(`Records for ${userAddress}:`, records);
+        console.log(`Records for ${userAddress}:`, records.map(record => ({
+            key: record.key,
+            cid: record.cid,
+            filePath: record.filePath
+        })));
     } catch (error) {
         console.error(`Failed to get records: ${error}`);
     }
@@ -41,10 +58,13 @@ async function getRecordsCount(userAddress) {
 }
 
 const userAddress = "0xaf75E5Ea5D6CcA3059F4261201D51fFFe7b0DB6e";
-const ipfsHashToAdd = "QmTqu3LStYcKgQK4hRZD9Q9HcC2YCbqJmNMqAJq2RqNz8X"; 
+// Example values for the new parameters
+const keyToAdd = "exampleKey";
+const cidToAdd = "exampleCID";
+const filePathToAdd = "/example/path";
 
 (async () => {
-    await addRecord(ipfsHashToAdd);
+    await addRecord(keyToAdd, cidToAdd, filePathToAdd); // Updated function call
     await getRecords(userAddress);
     await getRecordsCount(userAddress);
 })();
