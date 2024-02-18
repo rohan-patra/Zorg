@@ -1,0 +1,76 @@
+{
+    "patientInfo": {
+        "name": "Patient Name 26",
+        "gender": "Male",
+        "age": 54,
+        "dob": "1981-01-09",
+        "address": "456 New Example Street, City 26, Country",
+        "race": "Other"
+    },
+    "genericHealthInfo": {
+        "height": "163 cm",
+        "weight": "75 kg",
+        "BMI": "24.8",
+        "restingHeartRate": "85 bpm",
+        "VO2Max": "40.9 ml/kg/min",
+        "bodyFatPercentage": "28.2%",
+        "vision": {
+            "leftEye": "Corrected with contact lenses",
+            "rightEye": "20/40"
+        },
+        "allergies": [
+            "Milk"
+        ],
+        "drugAllergies": [
+            "Eggs",
+            "Dust mites"
+        ],
+        "surgicalHistory": [
+            {
+                "surgeryName": "Gallbladder removal",
+                "date": "2015-11-16",
+                "outcome": "Successful"
+            }
+        ],
+        "pastHealthcareVisits": [
+            {
+                "visitDate": "2021-04-05",
+                "reason": "Fracture",
+                "outcome": "Cast applied"
+            },
+            {
+                "visitDate": "2014-12-28",
+                "reason": "Flu symptoms",
+                "outcome": "Prescribed medication"
+            },
+            {
+                "visitDate": "2023-11-07",
+                "reason": "Routine checkup",
+                "outcome": "All clear"
+            }
+        ]
+    },
+    "diseases": [
+        {
+            "diseaseId": 1,
+            "name": "Chronic Kidney Disease",
+            "dateOfIncidence": "2018-04-07",
+            "description": "Gradual loss of kidney function.",
+            "assignedTreatment": "Blood pressure medications, diet changes"
+        },
+        {
+            "diseaseId": 2,
+            "name": "Hypertension",
+            "dateOfIncidence": "2020-10-15",
+            "description": "High blood pressure, risking heart disease and stroke.",
+            "assignedTreatment": "Beta-blockers, lifestyle modifications"
+        },
+        {
+            "diseaseId": 3,
+            "name": "COPD",
+            "dateOfIncidence": "2017-10-08",
+            "description": "Chronic obstructive pulmonary disease, a chronic inflammatory lung disease.",
+            "assignedTreatment": "Bronchodilators, steroids"
+        }
+    ]
+}

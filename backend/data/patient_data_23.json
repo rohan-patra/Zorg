@@ -1,0 +1,59 @@
+{
+    "patientInfo": {
+        "name": "Patient Name 23",
+        "gender": "Female",
+        "age": 20,
+        "dob": "1966-10-29",
+        "address": "456 New Example Street, City 23, Country",
+        "race": "Hispanic"
+    },
+    "genericHealthInfo": {
+        "height": "163 cm",
+        "weight": "57 kg",
+        "BMI": "18.6",
+        "restingHeartRate": "61 bpm",
+        "VO2Max": "56.6 ml/kg/min",
+        "bodyFatPercentage": "24.9%",
+        "vision": {
+            "leftEye": "20/40",
+            "rightEye": "20/20"
+        },
+        "allergies": [
+            "Latex",
+            "Dust mites"
+        ],
+        "drugAllergies": [
+            "Pollen"
+        ],
+        "surgicalHistory": [
+            {
+                "surgeryName": "Hernia repair",
+                "date": "2015-03-11",
+                "outcome": "Recovered with complications"
+            }
+        ],
+        "pastHealthcareVisits": [
+            {
+                "visitDate": "2015-08-29",
+                "reason": "Fracture",
+                "outcome": "Cast applied"
+            }
+        ]
+    },
+    "diseases": [
+        {
+            "diseaseId": 1,
+            "name": "Asthma",
+            "dateOfIncidence": "2018-06-16",
+            "description": "Airways narrow and swell, producing extra mucus.",
+            "assignedTreatment": "Inhaled corticosteroids, long-acting beta agonists"
+        },
+        {
+            "diseaseId": 2,
+            "name": "Rheumatoid Arthritis",
+            "dateOfIncidence": "2020-05-11",
+            "description": "An autoimmune disorder affecting the joints.",
+            "assignedTreatment": "DMARDs, NSAIDs"
+        }
+    ]
+}

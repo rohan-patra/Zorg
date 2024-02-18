@@ -1,0 +1,68 @@
+{
+    "patientInfo": {
+        "name": "Patient Name 27",
+        "gender": "Male",
+        "age": 27,
+        "dob": "1947-10-25",
+        "address": "456 New Example Street, City 27, Country",
+        "race": "Caucasian"
+    },
+    "genericHealthInfo": {
+        "height": "161 cm",
+        "weight": "97 kg",
+        "BMI": "27.5",
+        "restingHeartRate": "83 bpm",
+        "VO2Max": "31.8 ml/kg/min",
+        "bodyFatPercentage": "24.3%",
+        "vision": {
+            "leftEye": "20/30",
+            "rightEye": "20/30"
+        },
+        "allergies": [
+            "Eggs"
+        ],
+        "drugAllergies": [
+            "Nuts"
+        ],
+        "surgicalHistory": [
+            {
+                "surgeryName": "Gallbladder removal",
+                "date": "2022-04-11",
+                "outcome": "Successful"
+            },
+            {
+                "surgeryName": "Hernia repair",
+                "date": "2016-03-25",
+                "outcome": "Recovered with complications"
+            }
+        ],
+        "pastHealthcareVisits": [
+            {
+                "visitDate": "2018-11-20",
+                "reason": "Flu symptoms",
+                "outcome": "Prescribed medication"
+            },
+            {
+                "visitDate": "2015-12-11",
+                "reason": "Routine checkup",
+                "outcome": "All clear"
+            }
+        ]
+    },
+    "diseases": [
+        {
+            "diseaseId": 1,
+            "name": "Depression",
+            "dateOfIncidence": "2020-11-17",
+            "description": "A mood disorder causing a persistent feeling of sadness and loss of interest.",
+            "assignedTreatment": "Antidepressants, psychotherapy"
+        },
+        {
+            "diseaseId": 2,
+            "name": "Anxiety",
+            "dateOfIncidence": "2022-05-01",
+            "description": "Intense, excessive, and persistent worry and fear about everyday situations.",
+            "assignedTreatment": "Anxiolytics, cognitive behavioral therapy"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "patientInfo": {
+        "name": "Patient Name 25",
+        "gender": "Female",
+        "age": 35,
+        "dob": "1999-05-28",
+        "address": "456 New Example Street, City 25, Country",
+        "race": "Caucasian"
+    },
+    "genericHealthInfo": {
+        "height": "177 cm",
+        "weight": "79 kg",
+        "BMI": "26.4",
+        "restingHeartRate": "83 bpm",
+        "VO2Max": "49.7 ml/kg/min",
+        "bodyFatPercentage": "16.9%",
+        "vision": {
+            "leftEye": "Corrected with contact lenses",
+            "rightEye": "Corrected with glasses"
+        },
+        "allergies": [
+            "Eggs",
+            "Nuts"
+        ],
+        "drugAllergies": [
+            "Eggs",
+            "Dust mites",
+            "Nuts"
+        ],
+        "surgicalHistory": [
+            {
+                "surgeryName": "Gallbladder removal",
+                "date": "2021-04-26",
+                "outcome": "Successful"
+            },
+            {
+                "surgeryName": "Appendectomy",
+                "date": "2018-06-07",
+                "outcome": "Successful"
+            }
+        ],
+        "pastHealthcareVisits": [
+            {
+                "visitDate": "2017-04-07",
+                "reason": "Routine checkup",
+                "outcome": "All clear"
+            }
+        ]
+    },
+    "diseases": [
+        {
+            "diseaseId": 1,
+            "name": "Chronic Kidney Disease",
+            "dateOfIncidence": "2019-06-29",
+            "description": "Gradual loss of kidney function.",
+            "assignedTreatment": "Blood pressure medications, diet changes"
+        },
+        {
+            "diseaseId": 2,
+            "name": "Hypertension",
+            "dateOfIncidence": "2019-03-10",
+            "description": "High blood pressure, risking heart disease and stroke.",
+            "assignedTreatment": "Beta-blockers, lifestyle modifications"
+        }
+    ]
+}

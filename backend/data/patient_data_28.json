@@ -1,0 +1,73 @@
+{
+    "patientInfo": {
+        "name": "Patient Name 28",
+        "gender": "Female",
+        "age": 55,
+        "dob": "1983-11-30",
+        "address": "456 New Example Street, City 28, Country",
+        "race": "Other"
+    },
+    "genericHealthInfo": {
+        "height": "156 cm",
+        "weight": "84 kg",
+        "BMI": "28.6",
+        "restingHeartRate": "68 bpm",
+        "VO2Max": "47.9 ml/kg/min",
+        "bodyFatPercentage": "18.7%",
+        "vision": {
+            "leftEye": "20/30",
+            "rightEye": "20/50"
+        },
+        "allergies": [
+            "Pollen",
+            "Dust mites",
+            "Shellfish"
+        ],
+        "drugAllergies": [
+            "Dust mites",
+            "Nuts"
+        ],
+        "surgicalHistory": [
+            {
+                "surgeryName": "Hernia repair",
+                "date": "2023-07-24",
+                "outcome": "Recovered with complications"
+            },
+            {
+                "surgeryName": "Gallbladder removal",
+                "date": "2016-07-21",
+                "outcome": "Successful"
+            }
+        ],
+        "pastHealthcareVisits": [
+            {
+                "visitDate": "2022-03-03",
+                "reason": "Flu symptoms",
+                "outcome": "Prescribed medication"
+            }
+        ]
+    },
+    "diseases": [
+        {
+            "diseaseId": 1,
+            "name": "Hypertension",
+            "dateOfIncidence": "2021-07-22",
+            "description": "High blood pressure, risking heart disease and stroke.",
+            "assignedTreatment": "Beta-blockers, lifestyle modifications"
+        },
+        {
+            "diseaseId": 2,
+            "name": "COPD",
+            "dateOfIncidence": "2014-11-25",
+            "description": "Chronic obstructive pulmonary disease, a chronic inflammatory lung disease.",
+            "assignedTreatment": "Bronchodilators, steroids"
+        },
+        {
+            "diseaseId": 3,
+            "name": "Depression",
+            "dateOfIncidence": "2019-08-27",
+            "description": "A mood disorder causing a persistent feeling of sadness and loss of interest.",
+            "assignedTreatment": "Antidepressants, psychotherapy"
+        }
+    ]
+}

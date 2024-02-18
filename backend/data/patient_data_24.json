@@ -1,0 +1,71 @@
+{
+    "patientInfo": {
+        "name": "Patient Name 24",
+        "gender": "Male",
+        "age": 40,
+        "dob": "1986-05-25",
+        "address": "456 New Example Street, City 24, Country",
+        "race": "African American"
+    },
+    "genericHealthInfo": {
+        "height": "165 cm",
+        "weight": "99 kg",
+        "BMI": "29.0",
+        "restingHeartRate": "73 bpm",
+        "VO2Max": "44.6 ml/kg/min",
+        "bodyFatPercentage": "13.2%",
+        "vision": {
+            "leftEye": "20/40",
+            "rightEye": "Corrected with glasses"
+        },
+        "allergies": [
+            "Shellfish",
+            "Dust mites",
+            "Nuts"
+        ],
+        "drugAllergies": [
+            "Latex"
+        ],
+        "surgicalHistory": [],
+        "pastHealthcareVisits": [
+            {
+                "visitDate": "2023-10-11",
+                "reason": "Fracture",
+                "outcome": "Cast applied"
+            },
+            {
+                "visitDate": "2022-04-29",
+                "reason": "Flu symptoms",
+                "outcome": "Prescribed medication"
+            },
+            {
+                "visitDate": "2014-05-20",
+                "reason": "Routine checkup",
+                "outcome": "All clear"
+            }
+        ]
+    },
+    "diseases": [
+        {
+            "diseaseId": 1,
+            "name": "Osteoporosis",
+            "dateOfIncidence": "2018-07-29",
+            "description": "Bones become weak and brittle.",
+            "assignedTreatment": "Bisphosphonates, calcium supplements"
+        },
+        {
+            "diseaseId": 2,
+            "name": "Rheumatoid Arthritis",
+            "dateOfIncidence": "2023-02-25",
+            "description": "An autoimmune disorder affecting the joints.",
+            "assignedTreatment": "DMARDs, NSAIDs"
+        },
+        {
+            "diseaseId": 3,
+            "name": "Anxiety",
+            "dateOfIncidence": "2019-07-12",
+            "description": "Intense, excessive, and persistent worry and fear about everyday situations.",
+            "assignedTreatment": "Anxiolytics, cognitive behavioral therapy"
+        }
+    ]
+}

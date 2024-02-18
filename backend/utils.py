@@ -89,3 +89,16 @@ def dicom_metadata_to_xml(dicom_file_path: str):
 
 # xml_fhir_data = json_to_fhir_xml(json_fhir_data)
 # print(xml_fhir_data)
+
+import json
+
+file_path = './sample_fhir_json_data.json'
+
+with open(file_path, 'r') as file:
+    json_data = json.load(file)
+
+
+xml_fhir_data = json_to_fhir_xml(json.dumps(json_data)) 
+xml_file_path = './output_fhir_data.xml'
+with open(xml_file_path, 'w') as xml_file:
+    xml_file.write(xml_fhir_data)

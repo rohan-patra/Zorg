@@ -1,0 +1,61 @@
+{
+    "patientInfo": {
+        "name": "Patient Name 22",
+        "gender": "Male",
+        "age": 39,
+        "dob": "1989-12-30",
+        "address": "456 New Example Street, City 22, Country",
+        "race": "Caucasian"
+    },
+    "genericHealthInfo": {
+        "height": "167 cm",
+        "weight": "59 kg",
+        "BMI": "24.8",
+        "restingHeartRate": "71 bpm",
+        "VO2Max": "45.2 ml/kg/min",
+        "bodyFatPercentage": "10.0%",
+        "vision": {
+            "leftEye": "20/40",
+            "rightEye": "20/40"
+        },
+        "allergies": [
+            "Nuts",
+            "Shellfish",
+            "Latex"
+        ],
+        "drugAllergies": [
+            "Pollen",
+            "Milk",
+            "Dust mites"
+        ],
+        "surgicalHistory": [],
+        "pastHealthcareVisits": [
+            {
+                "visitDate": "2014-08-30",
+                "reason": "Routine checkup",
+                "outcome": "All clear"
+            },
+            {
+                "visitDate": "2018-02-27",
+                "reason": "Flu symptoms",
+                "outcome": "Prescribed medication"
+            }
+        ]
+    },
+    "diseases": [
+        {
+            "diseaseId": 1,
+            "name": "COPD",
+            "dateOfIncidence": "2015-02-28",
+            "description": "Chronic obstructive pulmonary disease, a chronic inflammatory lung disease.",
+            "assignedTreatment": "Bronchodilators, steroids"
+        },
+        {
+            "diseaseId": 2,
+            "name": "Anxiety",
+            "dateOfIncidence": "2019-05-14",
+            "description": "Intense, excessive, and persistent worry and fear about everyday situations.",
+            "assignedTreatment": "Anxiolytics, cognitive behavioral therapy"
+        }
+    ]
+}

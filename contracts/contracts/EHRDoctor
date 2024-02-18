@@ -1,0 +1,55 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract EHRAddWithTimeLimitedAccess {
+    struct RecordAccess {
+        string ipfsHash;
+        uint256 expiration; // Timestamp when the access expires
+    }
+
+    mapping(address => RecordAccess[]) private userRecords;
+    mapping(address => mapping(address => bool)) private doctorAccess; // Tracks which doctors have access to which user's records
+
+    event RecordAdded(address indexed user, string ipfsHash);
+    event AccessGranted(address indexed user, address indexed doctor, uint256 expiration);
+
+    function addRecord(string memory ipfsHash, uint256 accessDuration) public {
+        RecordAccess memory newAccess = RecordAccess(ipfsHash, block.timestamp + accessDuration);
+        userRecords[msg.sender].push(newAccess);
+        emit RecordAdded(msg.sender, ipfsHash);
+    }
+
+    function grantAccess(address doctor, uint256 recordIndex, uint256 accessDuration) public {
+        require(recordIndex < userRecords[msg.sender].length, "Invalid record index");
+        userRecords[msg.sender][recordIndex].expiration = block.timestamp + accessDuration;
+        doctorAccess[msg.sender][doctor] = true;
+        emit AccessGranted(msg.sender, doctor, userRecords[msg.sender][recordIndex].expiration);
+    }
+
+    function getRecords(address user, address doctor) public view returns (string[] memory) {
+        require(doctorAccess[user][doctor], "Access not granted to this doctor");
+        uint256 count = getAccessibleRecordsCount(user, doctor);
+        string[] memory accessibleRecords = new string[](count);
+        uint256 currentIndex = 0;
+
+        for (uint256 i = 0; i < userRecords[user].length; i++) {
+            if (block.timestamp < userRecords[user][i].expiration) {
+                accessibleRecords[currentIndex] = userRecords[user][i].ipfsHash;
+                currentIndex++;
+            }
+        }
+
+        return accessibleRecords;
+    }
+
+    function getAccessibleRecordsCount(address user, address doctor) public view returns (uint) {
+        require(doctorAccess[user][doctor], "Access not granted to this doctor");
+        uint count = 0;
+        for (uint256 i = 0; i < userRecords[user].length; i++) {
+            if (block.timestamp < userRecords[user][i].expiration) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
